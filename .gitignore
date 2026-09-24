@@ -1,0 +1,28 @@
+# Configurações locais
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+
+# Arquivos temporários
+*.tmp
+*.log
+
+# Backups
+*.bak
+*.backup
+
+# Banco de dados local
+*.sql
+
+# Dependências do Composer
+/vendor/
+
+# Configuração local do banco
+db.php
