@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,6 +80,54 @@ button {
     cursor: pointer;
 }
 
+.icea-button {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 2;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 14px 22px;
+    border: 1px solid rgba(0, 198, 255, 0.45);
+    border-radius: 8px;
+    background: rgba(10, 25, 50, 0.75);
+    color: #e0f7ff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #e0f7ff;
+    text-decoration: none;
+    box-shadow: 0 0 18px rgba(0, 150, 255, 0.18);
+    animation: icea-pulse 2.4s ease-in-out infinite;
+}
+
+.icea-button:hover {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    box-shadow: 0 0 24px rgba(0, 150, 255, 0.4);
+    animation-play-state: paused;
+}
+
+@keyframes icea-pulse {
+    0%, 100% {
+        box-shadow: 0 0 14px rgba(0, 150, 255, 0.2);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 22px rgba(0, 198, 255, 0.42);
+        transform: scale(1.025);
+    }
+}
+
+@media (max-width: 600px) {
+    .icea-button {
+        top: 12px;
+        left: 12px;
+        padding: 11px 15px;
+        font-size: 14px;
+    }
+}
+
 .opcoes {
     display: flex;
     gap: 15px;
@@ -97,6 +145,8 @@ button {
 <div class="logo">
     <img src="assets/css/imagens/logotipodcta.png">
 </div>
+
+<a href="autorizados_icea.php" class="icea-button">Autorizados - ICEA</a>
 
 <div class="form-card">
 
@@ -360,4 +410,3 @@ window.addEventListener("resize", resize);
 
 </body>
 </html>
-```

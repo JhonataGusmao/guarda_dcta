@@ -20,6 +20,7 @@ Thumbs.db
 
 # Banco de dados local
 *.sql
+!visitante.sql
 
 # Dependências do Composer
 /vendor/

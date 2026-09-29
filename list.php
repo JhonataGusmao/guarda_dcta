@@ -167,6 +167,11 @@ th, td {
     border-bottom: 1px solid rgba(0,150,255,0.2);
 }
 
+.ramal-col {
+    min-width: 155px;
+    white-space: nowrap;
+}
+
 th {
     background: rgba(0,150,255,0.2);
 }
@@ -266,7 +271,7 @@ span {
   <th>Nome</th>
   <th>CPF</th>
   <th>Seção</th>
-  <th>Ramal</th>
+  <th class="ramal-col">Ramal</th>
   <th>Autorizado por</th>
   <th>Carro entrou?</th>
   <th>Placa</th>
@@ -288,7 +293,7 @@ span {
   <td><?= highlight($row['nome'], $filtro_nome) ?></td>
   <td class="small"><?= highlight($row['cpf'], $filtro_cpf) ?></td>
   <td><?= highlight($row['secao'], $filtro_secao) ?></td>
-  <td><?= htmlspecialchars($row['ramal'] ?? '') ?></td>
+  <td class="ramal-col"><?= htmlspecialchars($row['ramal'] ?? '') ?></td>
   <td><?= highlight($row['autorizado'], $filtro_autorizado) ?></td>
   <td><?= htmlspecialchars($row['carro_entrou'] ?? '') ?></td>
   <td><?= highlight($row['placa'] ?? '', $filtro_placa) ?></td>
@@ -354,7 +359,7 @@ span {
   <th>Nome</th>
   <th>CPF</th>
   <th>Seção</th>
-  <th>Ramal</th>
+  <th class="ramal-col">Ramal</th>
   <th>Autorizado por</th>
   <th>Carro entrou?</th>
   <th>Placa</th>
@@ -380,7 +385,7 @@ if (!$res_pendentes || $res_pendentes->num_rows === 0): ?>
   <td><?= htmlspecialchars($rowp['nome']) ?></td>
   <td><?= htmlspecialchars($rowp['cpf']) ?></td>
   <td><?= htmlspecialchars($rowp['secao']) ?></td>
-  <td><?= htmlspecialchars($rowp['ramal']) ?></td>
+  <td class="ramal-col"><?= htmlspecialchars($rowp['ramal']) ?></td>
   <td><?= htmlspecialchars($rowp['autorizado']) ?></td>
   <td><?= htmlspecialchars($rowp['carro_entrou']) ?></td>
   <td><?= htmlspecialchars($rowp['placa']) ?></td>
